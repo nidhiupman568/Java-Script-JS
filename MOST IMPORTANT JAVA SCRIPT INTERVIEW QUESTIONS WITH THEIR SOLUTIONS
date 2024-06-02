@@ -1,0 +1,303 @@
+
+1. **What are the differences between Java and JavaScript?**
+
+   **Answer:**
+   - **JavaScript:** A lightweight, client-side scripting language primarily used for creating interactive web pages. It's often referred to as the browser's language.
+   - **Java:** An object-oriented programming language that allows for the creation of compiled programs running on nearly any platform. Known for its "Write Once, Run Anywhere" capability.
+
+2. **What are JavaScript Data Types?**
+
+   **Answer:**
+   - **Primitive:** Numbers, Strings, Boolean, Symbol
+   - **Trivial:** Undefined, Null
+   - **Composite:** Objects, Functions, Arrays
+
+3. **Which symbol is used for comments in JavaScript?**
+
+   **Answer:**
+   - **Single-line comment:** `//`
+   - **Multi-line comment:** `/* ... */`
+
+4. **What would be the result of `3 + 2 + "7"`?**
+
+   **Answer:** The result is `"57"`. Here, `3` and `2` are added as numbers to give `5`, which is then concatenated with the string `"7"`.
+
+5. **What is the use of the `isNaN` function?**
+
+   **Answer:** The `isNaN` function checks if a value is NaN (Not-a-Number) and of the type "Number". It returns `true` if the value is NaN, otherwise `false`.
+
+6. **Which is faster, JavaScript or ASP script?**
+
+   **Answer:** JavaScript is faster because it is a client-side scripting language, whereas ASP script is server-side and relies on server processing.
+
+7. **What is negative infinity?**
+
+   **Answer:** Negative infinity is a constant that represents a value less than any other number. In JavaScript, it is denoted as `-Infinity`.
+
+8. **Is it possible to break JavaScript code into several lines?**
+
+   **Answer:** Yes, you can break a line of code using the backslash (`\`).
+
+   ```javascript
+   document.write("A Online Computer Science Portal\ for Geeks");
+   ```
+
+9. **Which company developed JavaScript?**
+
+   **Answer:** JavaScript was developed by Netscape and created by Brendan Eich in 1995.
+
+10. **What are undeclared and undefined variables?**
+
+    **Answer:**
+    - **Undefined:** A variable declared but not assigned any value.
+    - **Undeclared:** A variable not declared at all in the script.
+
+11. **Write a JavaScript code for adding new elements dynamically.**
+
+    ```html
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <title>Document</title>
+    </head>
+    <body>
+        <button onclick="create()">Click Here!</button>
+        <script>
+            function create() {
+                let geeks = document.createElement('geeks');
+                geeks.textContent = "Geeksforgeeks";
+                geeks.setAttribute('class', 'note');
+                document.body.appendChild(geeks);
+            }
+        </script>
+    </body>
+    </html>
+    ```
+
+12. **What are global variables? How are these variables declared, and what are the problems associated with them?**
+
+    **Answer:** Global variables are declared outside any function and are accessible from any function. Problems include difficulty in debugging and testing.
+
+    ```javascript
+    let petName = "Rocky"; // Global Variable
+    myFunction();
+
+    function myFunction() {
+        document.getElementById("geeks").innerHTML = typeof petName + "- " + "My pet name is " + petName;
+    }
+
+    document.getElementById("Geeks").innerHTML = typeof petName + "- " + "My pet name is " + petName;
+    ```
+
+13. **What do you mean by NULL in JavaScript?**
+
+    **Answer:** NULL represents the absence of any value or object. It's an empty value/object.
+
+14. **How to delete property-specific values?**
+
+    **Answer:** Use the `delete` keyword.
+
+    ```javascript
+    let gfg = { Course: "DSA", Duration: 30 };
+    delete gfg.Course;
+    ```
+
+15. **What is a prompt box?**
+
+    **Answer:** A prompt box is a dialog box that prompts the user to input some text. It returns the text entered by the user or null.
+
+16. **What is the ‘this’ keyword in JavaScript?**
+
+    **Answer:** The `this` keyword refers to the current execution context of the function. It changes depending on how the function is called.
+
+17. **Explain the working of timers in JavaScript. Also elucidate the drawbacks of using the timer, if any.**
+
+    **Answer:** Timers execute code at specific intervals using `setTimeout`, `setInterval`, and `clearInterval`. Drawbacks include potential performance issues due to frequent timer invocations.
+
+18. **What is the difference between ViewState and SessionState?**
+
+    **Answer:**
+    - **ViewState:** Specific to a single page in a session.
+    - **SessionState:** User-specific and accessible across multiple pages.
+
+19. **How to submit a form using JavaScript?**
+
+    **Answer:** Use the `document.form[0].submit()` method to submit the form.
+
+20. **Does JavaScript support automatic type conversion?**
+
+    **Answer:** Yes, JavaScript supports automatic type conversion.
+Certainly! Here are the 20 interview questions and their solutions, rephrased for clarity:
+
+### 21. Looping Structures in JavaScript
+**Question:** What are the different looping structures available in JavaScript?
+
+**Solution:**
+1. **while loop:** Executes code repeatedly as long as the given Boolean condition is true. It's like a repeating if statement.
+2. **for loop:** Offers a concise syntax, integrating initialization, condition, and increment/decrement in one line for easier debugging.
+3. **do-while loop:** Similar to the while loop but checks the condition after executing the statements, making it an Exit Control Loop.
+
+### 22. Changing the Style/Class of an Element
+**Question:** How can you change the style or class of an element in JavaScript?
+
+**Solution:**
+- To change the style:
+```javascript
+document.getElementById("myText").style.fontSize = "16px";
+```
+- To change the class:
+```javascript
+document.getElementById("myText").className = "newClass";
+```
+
+### 23. Reading and Writing Files in JavaScript
+**Question:** How can you read and write a file using JavaScript?
+
+**Solution:**
+- To read a file:
+```javascript
+readFile(path, options, callback);
+```
+- To write a file:
+```javascript
+writeFile(path, data, callback);
+```
+
+### 24. Variable Typing in JavaScript
+**Question:** What is variable typing in JavaScript?
+
+**Solution:** Variable typing allows a variable to store different types of values. For example:
+```javascript
+let geeks = 42;
+geeks = "GeeksforGeeks";
+```
+
+### 25. Converting Strings to Integers
+**Question:** How do you convert a string of any base to an integer in JavaScript?
+
+**Solution:** Use the `parseInt()` function, which takes the string and the base as arguments. If the string doesn't contain a number, it returns NaN.
+```javascript
+let number = parseInt("1010", 2); // Converts binary 1010 to integer 10
+```
+
+### 26. Detecting the Client's Operating System
+**Question:** How can you detect the operating system on the client machine using JavaScript?
+
+**Solution:** Use `navigator.appVersion` or `navigator.userAgent` to get the version information of the browser, which includes OS details.
+```javascript
+let osInfo = navigator.appVersion;
+```
+
+### 27. Types of Pop-up Boxes in JavaScript
+**Question:** What are the types of pop-up boxes available in JavaScript?
+
+**Solution:**
+- **Alert box:** Displays a message with an OK button.
+- **Confirm box:** Displays a message with OK and Cancel buttons.
+- **Prompt box:** Asks the user to input some data.
+
+### 28. Alert Box vs. Confirmation Box
+**Question:** What is the difference between an alert box and a confirmation box?
+
+**Solution:** 
+- **Alert box:** Only has an OK button and is used to inform the user.
+- **Confirmation box:** Has OK and Cancel buttons, allowing the user to agree or cancel.
+
+### 29. Disadvantages of Using innerHTML
+**Question:** What are the disadvantages of using `innerHTML` in JavaScript?
+
+**Solution:** Using `innerHTML` can replace the content entirely, which can remove event handlers attached to DOM elements. Using `+=` to append also replaces the old content.
+
+### 30. Use of void(0) in JavaScript
+**Question:** What is the use of `void(0)` in JavaScript?
+
+**Solution:** `void(0)` is used to call a function without refreshing the page. It effectively does nothing and returns `undefined`.
+
+### 31. 'Strict' Mode in JavaScript
+**Question:** What is 'Strict' mode in JavaScript and how can it be enabled?
+
+**Solution:** 'Strict' mode is a feature in ECMAScript 5 that makes JavaScript code run in a restricted mode, throwing more exceptions to prevent errors. It can be enabled by adding `"use strict";` at the beginning of a script or function.
+```javascript
+"use strict";
+```
+
+### 32. Getting the Status of a CheckBox
+**Question:** How can you get the status of a checkbox in JavaScript?
+
+**Solution:** Use the `checked` property of the checkbox element.
+```javascript
+let isChecked = document.getElementById("GFG").checked; // Returns true if checked
+```
+
+### 33. Understanding Closures in JavaScript
+**Question:** What are closures in JavaScript and when are they used?
+
+**Solution:** Closures are created when a function retains access to its parent scope, even after the parent function has finished executing. They provide better control over code.
+```javascript
+function foo() {
+    let b = 1;
+    function inner() {
+        return b;
+    }
+    return inner;
+}
+let get_func_inner = foo();
+console.log(get_func_inner()); // Outputs 1
+```
+
+### 34. Difference Between call() and apply() Methods
+**Question:** What is the difference between `call()` and `apply()` methods in JavaScript?
+
+**Solution:**
+- **call() method:** Invokes a function with a specified `this` value and arguments provided individually.
+- **apply() method:** Invokes a function with a specified `this` value and arguments provided as an array.
+
+### 35. Targeting a Particular Frame with a Hyperlink
+**Question:** How can you target a particular frame from a hyperlink in JavaScript?
+
+**Solution:** Use the `target` attribute in the hyperlink.
+```html
+<a href="/geeksforgeeks.htm" target="newframe">New Page</a>
+```
+
+### 36. Types of Errors in JavaScript
+**Question:** What are the types of errors shown in JavaScript?
+
+**Solution:**
+- **Syntax error:** Errors in the syntax of the code.
+- **Logical error:** Errors in the logic that cause incorrect operation.
+- **Runtime error:** Errors that occur during the execution of the program.
+
+### 37. JavaScript vs. JScript
+**Question:** What is the difference between JavaScript and JScript?
+
+**Solution:**
+- **JavaScript:** Developed by Netscape, used for client and server-side applications, and independent of Java.
+- **JScript:** Developed by Microsoft, used to create active online content for the web.
+
+### 38. Declaring a Two-Dimensional Array
+**Question:** What does the statement `var myArray = [[]];` declare in JavaScript?
+
+**Solution:** It declares a two-dimensional array.
+
+### 39. Accessing HTML Elements in JavaScript
+**Question:** How many ways can an HTML element be accessed in JavaScript code?
+
+**Solution:** There are four ways:
+- `getElementById()`: Access by ID.
+- `getElementsByClassName()`: Access by class name.
+- `getElementsByTagName()`: Access by tag name.
+- `querySelector()`: Access by CSS selector.
+
+### 40. innerHTML vs. innerText
+**Question:** What is the difference between `innerHTML` and `innerText`?
+
+**Solution:** 
+- **innerText:** Sets or returns the text content of a node and its descendants as plain text.
+- **innerHTML:** Sets or returns the HTML content, allowing you to work with HTML rich text.
+
+### 41. Event Bubbling in JavaScript
+**Question:** What is event bubbling in JavaScript?
+
+**Solution:** Event bubbling occurs when an event starts at the most specific element (the target) and then bubbles up to the least specific (the root), triggering event handlers on each element in the hierarchy.
+
